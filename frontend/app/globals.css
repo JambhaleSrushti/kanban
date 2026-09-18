@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+:root {
+  --accent-yellow: #ecad0a;
+  --blue-primary: #209dd7;
+  --purple-secondary: #753991;
+  --dark-navy: #032147;
+  --gray-text: #888888;
+
+  --background: #f7f8fa;
+  --surface: #ffffff;
+  --foreground: var(--dark-navy);
+  --border: #e2e5ea;
+}
+
+@theme inline {
+  --color-accent-yellow: var(--accent-yellow);
+  --color-blue-primary: var(--blue-primary);
+  --color-purple-secondary: var(--purple-secondary);
+  --color-dark-navy: var(--dark-navy);
+  --color-gray-text: var(--gray-text);
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #021226;
+    --surface: #05213d;
+    --foreground: #eef3f8;
+    --border: #123457;
+    --gray-text: #a7b3c2;
+  }
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+}
